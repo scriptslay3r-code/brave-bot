@@ -25,7 +25,7 @@ answer = input("Headless? [Y] for Yes: ")
 
 if answer == 'y':
   options = Options()
-  options.binary_location('usr/bin/brave-browser')
+  options.binary_location = "usr/bin/brave-browser"
   options.add_argument('--headless')
   
   options.add_argument('--disable-gpu')
@@ -58,7 +58,7 @@ if answer == 'y':
 
 else:
   options = Options()
-  options.binary_location('usr/bin/brave-browser')
+  options.binary_location = "usr/bin/brave-browser"
   
   driver = webdriver.Chrome(options=options)
 
