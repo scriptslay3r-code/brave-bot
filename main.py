@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 
 from art import *
 
- new webdriver.ChromeOptions().setBinary("/usr/bin/brave-browser")
+new webdriver.ChromeOptions().setBinary("/usr/bin/brave-browser")
 
 welcome = text2art("Welcome")
 
