@@ -17,7 +17,7 @@ opening = text2art("Opening")
 browser = text2art("Browser!")
 
 
-url =("https://batgrowth.com/")
+url =("https://Duckduckgo.com/")
 
 #emailList = open(emailList.txt, 'r')
 
@@ -57,8 +57,9 @@ if answer == 'y':
 
 
 else:
-
-	options.binary_location('usr/bin/brave-browser')
+  options = Options()
+  options.binary_location('usr/bin/brave-browser')
+  
   driver = webdriver.Chrome(options=options)
 
   print(welcome)
