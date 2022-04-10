@@ -29,7 +29,7 @@ if answer == 'y':
   options = Options()
 #  new options().setBinary("/usr/bin/brave-browser")
 
-#  options.binary_location = "/usr/bin/brave-browser"
+  options.binary_location = "/usr/bin/brave-browser"
   options.add_argument('--headless')
   
   options.add_argument('--disable-gpu')
@@ -62,7 +62,7 @@ if answer == 'y':
 
 else:
   options = Options()
-#  options.binary_location = "/usr/bin/brave-browser"
+  options.binary_location = "/usr/bin/brave-browser"
   
   driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
   print(welcome)
