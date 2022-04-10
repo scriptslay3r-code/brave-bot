@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 
 from art import *
 
-new Options().setBinary("/usr/bin/brave-browser")
+ new webdriver.ChromeOptions().setBinary("/usr/bin/brave-browser")
 
 welcome = text2art("Welcome")
 
@@ -27,6 +27,8 @@ answer = input("Headless? [Y] for Yes: ")
 
 if answer == 'y':
   options = Options()
+#  new options().setBinary("/usr/bin/brave-browser")
+
 #  options.binary_location = "/usr/bin/brave-browser"
   options.add_argument('--headless')
   
