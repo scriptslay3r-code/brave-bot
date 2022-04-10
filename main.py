@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 
 from art import *
 
-new webdriver.ChromeOptions().setBinary("/usr/bin/brave-browser")
+#new webdriver.ChromeOptions().setBinary("/usr/bin/brave-browser")
 
 welcome = text2art("Welcome")
 
@@ -45,7 +45,7 @@ if answer == 'y':
   print(headless)
 
   time.sleep(.5)
-  driver = webdriver.Chrome(options=options)
+  driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
   i = 0
   times_scrolled = 0
   while i < 10:
@@ -64,8 +64,7 @@ else:
   options = Options()
 #  options.binary_location = "/usr/bin/brave-browser"
   
-  driver = webdriver.Chrome(options=options)
-
+  driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
   print(welcome)
 
   time.sleep(.5)
