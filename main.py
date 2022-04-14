@@ -77,7 +77,7 @@ description=[]
 for result in results:
     description.append(result.text)
     print(result)
-    print description
+    print(description)
     
 for link in links:
   print("These are the links": )
