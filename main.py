@@ -38,7 +38,7 @@ searchBox.send_keys("crypto")
 sleep
 buttonSearch.click()
 
-def getLinks():
+'''def getLinks():
   search_results = driver.find_elements(By.XPATH,"//div[@id='links']/div/div/h2/a[@class='result__a']")
   print(len(search_results))
   for result in search_results:
@@ -50,21 +50,15 @@ def getLinks():
   for link in urls:
     print(link)
     
-getLinks()
+getLinks()'''
 
-'''def scroll():
-  i = 0
-  times_scrolled = 0
-  while i < 10:
-    driver.get(url); time.sleep(1) #Delay a second  let page load make seem more human maybe
-    while times_scrolled < 15:
-      label.send_keys(keys.PAGE_DOWN)
-      time.sleep(2)
-      i = i + 1
-      times_scrolled = times_scrolled + 1
-      print("The value of your variable is: " + str(i))
-      print("We have scrolled " + str(times_scrolled) + "times")
-      #driver.quit()'''
-
-
-
+search_results = driver.find_elements(By.XPATH,"//div[@id='links']/div/div/h2/a[@class='result__a']")
+print(len(search_results))
+for result in search_results:
+  print(result.text)
+    
+urls = []
+for result in search_results:
+  urls.append(result.get_attribute("href"))
+for link in urls:
+  print(link)
