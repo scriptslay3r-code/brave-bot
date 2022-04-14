@@ -5,11 +5,13 @@ from pyKey import pressKey, releaseKey, press, sendSequence, showKeys
 pressKey("LALT")
 pressKey("t")
 
+press("LCTRL","LALT","t")
 releaseKey("LCTRL")
 releaseKey("LALT")
 releaseKey("t")
 
 '''
+press("LCTRL","LALT","t")
 terminal = ["LCTRL","LALT","t"]
 print("Sequence next")
 print(terminal)
