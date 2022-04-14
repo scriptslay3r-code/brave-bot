@@ -70,20 +70,9 @@ for link in urls:
   print(link)
   '''
   
-for result in driver.find_elements_by_css_selector('.result--ad'):
-  title = result.find_element_by_css_selector('.results--ads .result__title .result__a').text
-  link = result.find_element_by_css_selector('.results--ads .result__title .result__a').get_attribute('href')
-  source = result.find_element_by_css_selector('.results--ads .result__extras__url').text
-  snippet = result.find_element_by_css_selector('.results--ads .result__snippet').text
-  print(f'{title}\n{link}\n{snippet}\n{source}\n')
-  
-search_results = driver.find_elements(By.XPATH,"//div[@id='links']/div/div/h2/a[@class='result__a']")
-print(len(search_results))
-for result in search_results:
-  print(result.text)
-    
-urls = []
-for result in search_results:
-  urls.append(result.get_attribute("href"))
-for link in urls:
-  print(link)  
+results=driver.find_elements_by_xpath("//div[@id='links']/div/div/div[2]")
+
+description=[]
+
+for result in results:
+    description.append(result.text)
