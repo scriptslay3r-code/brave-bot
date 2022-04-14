@@ -3,14 +3,14 @@ from pyKey import pressKey, releaseKey, press, sendSequence, showKeys
 
 pressKey("LCTRL")
 pressKey("LALT")
-pressKey("TAB")
+pressKey("t")
 
 releaseKey("LCTRL")
 releaseKey("LALT")
-releaseKey("TAB")
+releaseKey("t")
 
 
-terminal = ("LCTRL","LALT","TAB")
+terminal = ("LCTRL","LALT","t")
 print("Sequence next")
 print(terminal)
 
