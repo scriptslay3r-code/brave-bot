@@ -14,5 +14,5 @@ terminal = ["LCTRL","LALT","t"]
 print("Sequence next")
 print(terminal)
 
-sendSequence(terminal)
+sendSequence(seq=terminal)
 
