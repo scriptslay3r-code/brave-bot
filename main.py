@@ -71,9 +71,14 @@ for link in urls:
   '''
   
 results=driver.find_elements_by_xpath("//div[@id='links']/div/div/div[2]")
-
+links = driver.find_elements(By.ID,'links')
 description=[]
 
 for result in results:
     description.append(result.text)
     print(result)
+    print description
+    
+for link in links:
+  print("These are the links": )
+  print(link)
