@@ -23,7 +23,7 @@ options.binary_location = "/usr/bin/brave-browser"
   
 driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
 url =("https://Duckduckgo.com/")
-  
+
 def intro():  
   
   print(welcome)
@@ -35,10 +35,18 @@ def intro():
   time.sleep(.5)
 
   print(browser)
+  time.sleep(.5)
 
-time.sleep(.5)
+intro()
+buttonSearch = driver.find_element_by_id("search_button_homepage")
+searchBox = driver.find_element_by_id("search_form_input_homepage')
+driver.execute_script("return arguments[0].scrollIntoView();", searchBox)
+time.sleep(1)
+searchBox.click()
+searchBox.send_keys("crypto")
+buttonSearch.click()
 
-def scroll():
+#def scroll():
   i = 0
   times_scrolled = 0
   while i < 10:
