@@ -1,10 +1,11 @@
 import keyboard
 
-keyboard.press_and_release('shift+s, space')
+keyboard.press_and_release('ctrl+alt+t')
+keyboard.write('brave-browser')
 
-keyboard.write('The quick brown fox jumps over the lazy dog.')
+'''keyboard.write('The quick brown fox jumps over the lazy dog.')
 
-keyboard.add_hotkey('ctrl+shift+a', print, args=('triggered', 'hotkey'))
+keyboard.add_hotkey('ctrl+alt+t', print, args=('triggered', 'hotkey'))
 
 # Press PAGE UP then PAGE DOWN to type "foobar".
 keyboard.add_hotkey('page up, page down', lambda: keyboard.write('foobar'))
@@ -20,5 +21,6 @@ keyboard.play(recorded, speed_factor=3)
 # Type @@ then press space to replace with abbreviation.
 keyboard.add_abbreviation('@@', 'my.long.email@example.com')
 
+'''
 # Block forever, like `while True`.
 keyboard.wait()
