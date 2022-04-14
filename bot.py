@@ -2,7 +2,7 @@ import keyboard
 
 keyboard.press_and_release('ctrl+alt+t')
 keyboard.write('brave-browser')
-
+keyboard.send('ctrl+alt+t')
 '''keyboard.write('The quick brown fox jumps over the lazy dog.')
 
 keyboard.add_hotkey('ctrl+alt+t', print, args=('triggered', 'hotkey'))
