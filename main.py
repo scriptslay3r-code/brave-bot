@@ -71,7 +71,7 @@ for link in urls:
   '''
   
 results=driver.find_elements_by_xpath("//div[@id='links']/div/div/div[2]")
-links = driver.find_elements(By.ID,'links')
+links = driver.find_elements_by_xpath("//div[@id='links']/div/div/div[2]").get_attribute('href')
 description=[]
 
 for result in results:
