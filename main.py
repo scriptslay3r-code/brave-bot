@@ -1,5 +1,4 @@
 import time
-
 from selenium import webdriver
 
 from selenium.webdriver.chrome.options import Options
@@ -39,14 +38,14 @@ def intro():
 
 intro()
 buttonSearch = driver.find_element_by_id("search_button_homepage")
-searchBox = driver.find_element_by_id("search_form_input_homepage')
+searchBox = driver.find_element_by_id("search_form_input_homepage")
 driver.execute_script("return arguments[0].scrollIntoView();", searchBox)
 time.sleep(1)
 searchBox.click()
 searchBox.send_keys("crypto")
 buttonSearch.click()
 
-#def scroll():
+'''def scroll():
   i = 0
   times_scrolled = 0
   while i < 10:
@@ -58,7 +57,7 @@ buttonSearch.click()
       times_scrolled = times_scrolled + 1
       print("The value of your variable is: " + str(i))
       print("We have scrolled " + str(times_scrolled) + "times")
-      #driver.quit()
+      #driver.quit()'''
 
 
 
