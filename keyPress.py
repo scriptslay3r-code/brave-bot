@@ -4,3 +4,5 @@ from pyKey import pressKey, releaseKey, press, sendSequence, showKeys
 pressKey("LCTRL")
 pressKey("LALT")
 pressKey("TAB")
+
+releaseKey("LCTRL","LALT","TAB")
