@@ -10,7 +10,7 @@ releaseKey("LALT")
 releaseKey("t")
 
 '''
-terminal = ("LCTRL","LALT","t")
+terminal = ["LCTRL","LALT","t"]
 print("Sequence next")
 print(terminal)
 
