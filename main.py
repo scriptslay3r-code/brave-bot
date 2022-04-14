@@ -18,7 +18,7 @@ opening = text2art("Opening")
 browser = text2art("Browser!")
 
 options = Options()
-options.binary_location = "/usr/bin/brave-browser"
+#options.binary_location = "/usr/bin/brave-browser"
   
 driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
 url =("https://Duckduckgo.com/")
@@ -34,9 +34,10 @@ def intro():
   time.sleep(.5)
 
   print(browser)
-  time.sleep(.5)
+  time.sleep(1.5)
 
 intro()
+driver.get(url)
 buttonSearch = driver.find_element_by_id("search_button_homepage")
 searchBox = driver.find_element_by_id("search_form_input_homepage")
 driver.execute_script("return arguments[0].scrollIntoView();", searchBox)
