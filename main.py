@@ -76,3 +76,4 @@ description=[]
 
 for result in results:
     description.append(result.text)
+    print(result)
