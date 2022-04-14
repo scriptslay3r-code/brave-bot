@@ -24,7 +24,7 @@ options.binary_location = "/usr/bin/brave-browser"
 driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
 url =("https://Duckduckgo.com/")
   
-def Browse():  
+def intro():  
   
   print(welcome)
 
@@ -36,20 +36,21 @@ def Browse():
 
   print(browser)
 
-  time.sleep(.5)
+time.sleep(.5)
+
+def scroll():
   i = 0
   times_scrolled = 0
   while i < 10:
-        	driver.get(url); time.sleep(1) #Delay a second  let page load make seem more human maybe
-        	while times_scrolled < 15:
-        		label.send_keys(keys.PAGE_DOWN)
-        		time.sleep(2)
-        		i = i + 1
-        		times_scrolled = times_scrolled + 1
-        		print("The value of your variable is: " + str(i))
-        		print("We have scrolled " + str(times_scrolled) + "times")
-        		
-        	driver.quit()
+    driver.get(url); time.sleep(1) #Delay a second  let page load make seem more human maybe
+    while times_scrolled < 15:
+      label.send_keys(keys.PAGE_DOWN)
+      time.sleep(2)
+      i = i + 1
+      times_scrolled = times_scrolled + 1
+      print("The value of your variable is: " + str(i))
+      print("We have scrolled " + str(times_scrolled) + "times")
+      #driver.quit()
 
 
 
