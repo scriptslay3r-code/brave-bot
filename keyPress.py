@@ -5,4 +5,14 @@ pressKey("LCTRL")
 pressKey("LALT")
 pressKey("TAB")
 
-releaseKey("LCTRL","LALT","TAB")
+releaseKey("LCTRL")
+releaseKey("LALT")
+releaseKey("TAB")
+
+
+terminal = ("LCTRL","LALT","TAB")
+print("Sequence next")
+print(terminal)
+
+sendSequence(seq=terminal)
+
