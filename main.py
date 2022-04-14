@@ -80,5 +80,5 @@ for result in results:
     print(description)
     
 for link in links:
-  print("These are the links": )
+  print("These are the links: ")
   print(link)
