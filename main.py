@@ -38,17 +38,20 @@ searchBox.send_keys("crypto")
 sleep
 buttonSearch.click()
 
-search_results = driver.find_elements(By.XPATH,"//div[@id='links']/div/div/h2/a[@class='result__a']")
-print(len(search_results))
-for result in search_results:
+def getLinks():
+  search_results = driver.find_elements(By.XPATH,"//div[@id='links']/div/div/h2/a[@class='result__a']")
+  print(len(search_results))
+  for result in search_results:
     print(result.text)
     
-urls = []
-for result in search_results:
+  urls = []
+  for result in search_results:
     urls.append(result.get_attribute("href"))
+  for link in urls:
+    print(link)
     
-for url in urls:
-    print(url)
+getLinks()
+
 '''def scroll():
   i = 0
   times_scrolled = 0
