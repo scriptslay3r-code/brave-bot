@@ -28,8 +28,8 @@ def intro():
 
 intro()
 driver.get(url)
-buttonSearch = driver.find_element(By.ID,"search_button_homepage")
-searchBox = driver.find_element(By.ID,"search_form_input_homepage")
+buttonSearch = driver.find_element(by.ID,"search_button_homepage")
+searchBox = driver.find_element(by.ID,"search_form_input_homepage")
 driver.execute_script("return arguments[0].scrollIntoView();", searchBox)
 time.sleep(1)
 searchBox.click()
