@@ -18,7 +18,7 @@ opening = text2art("Opening")
 browser = text2art("Browser!")
 
 options = Options()
-#options.binary_location = "/usr/bin/brave-browser"
+options.binary_location = "/usr/bin/brave-browser"
   
 driver = webdriver.Chrome('/usr/local/bin/chromedriver', options=options)
 url =("https://Duckduckgo.com/")
